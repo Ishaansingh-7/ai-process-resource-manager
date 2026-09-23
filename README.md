@@ -8,22 +8,7 @@ is applied without confirmation.
 Python, Tkinter, scikit-learn, matplotlib. CPU scheduling and Banker's
 algorithm simulators are included, written from scratch.
 
-```
-+----------------------------------------------------------------+
-|  header : title + summary cards (CPU, RAM used, RAM free, #)    |
-+----------------------------------------------------------------+
-|  toolbar: search box, pause, refresh-now, colour legend         |
-+-----------------------------------------------+----------------+
-|  table  : one row per process, AI class,       |  ALERTS        |
-|           warning icon, recommended action     +----------------+
-|                                                |  RECENT        |
-|                                                |  ACTIONS       |
-+-----------------------------------------------+----------------+
-|  details: the selected process + [Apply] [Ignore]               |
-+----------------------------------------------------------------+
-|  status : refresh time, totals, model / detector state          |
-+----------------------------------------------------------------+
-```
+![Dashboard](docs/dashboard.png)
 
 ## Quick start
 
@@ -175,6 +160,8 @@ A full matplotlib repaint costs ~61 ms against ~0.3 ms to hand the artists new
 numbers, so the charts repaint on their own slower timer instead of on every
 table refresh.
 
+![Process detail window](docs/process-detail.png)
+
 ## The OS simulators
 
 Both are written from scratch, import nothing from the UI, and run and test on
@@ -183,10 +170,14 @@ their own. `simulator_ui.py` holds their windows and nothing else.
 **`scheduler.py`** - FCFS, SJF, Priority and Round Robin, measured with
 completion, turnaround, waiting and response time.
 
+![CPU scheduling simulator](docs/scheduler.png)
+
 **`deadlock.py`** - the Banker's algorithm. Avoidance (`is_safe`,
 `request_resources`) and detection are separate functions, since the two get
 confused often. Avoidance asks "if I grant this, can everybody still finish?"
 before deadlock happens. Detection looks for a cycle that already exists.
+
+![Deadlock detection](docs/deadlock.png)
 
 `test_simulators.py` checks both against worked examples from Silberschatz,
 Galvin and Gagne's *Operating System Concepts*, where the correct answer is
