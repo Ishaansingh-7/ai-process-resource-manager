@@ -1,0 +1,17 @@
+# AI-Based Process Resource Manager - dependencies
+# Install with:  pip install -r requirements.txt
+
+# --- Phase 1: monitoring + dashboard --------------------------------------
+psutil>=5.9.0        # cross-platform process and system metrics
+
+# Tkinter is part of the Python standard library and ships with the official
+# Windows installer, so there is nothing to install for the GUI.
+
+# --- Phase 2: machine learning --------------------------------------------
+pandas>=2.0.0        # load and clean data/process_data.csv
+numpy>=1.24.0        # numeric arrays behind pandas / scikit-learn
+scikit-learn>=1.3.0  # RandomForestClassifier
+joblib>=1.3.0        # save and load models/resource_model.pkl
+
+# --- Phase 5: charts embedded in the dashboard ----------------------------
+matplotlib>=3.7.0    # FigureCanvasTkAgg line and bar charts

@@ -1,0 +1,31 @@
+# --- Python -----------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+
+# --- Virtual environments ---------------------------------------------------
+.venv/
+venv/
+env/
+
+# --- Editors / IDEs ---------------------------------------------------------
+.idea/
+.vscode/
+*.swp
+
+# --- OS ---------------------------------------------------------------------
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# --- Claude Code ------------------------------------------------------------
+.claude/settings.local.json
+
+# --- Project runtime output -------------------------------------------------
+# The full dataset the collector builds (tens of MB and growing).
+# A 50k-row sample is committed as data/process_data_sample.csv instead.
+data/process_data.csv
+
+# Log of actions applied from the dashboard - local to each machine.
+data/action_log.csv
